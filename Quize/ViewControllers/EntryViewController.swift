@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class EntryViewController: UIViewController {
 
     @IBOutlet var helloLabel: UILabel!
     override func viewDidLoad() {
