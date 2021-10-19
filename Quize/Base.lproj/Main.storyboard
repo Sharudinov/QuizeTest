@@ -12,57 +12,35 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="EntryViewController" customModule="Quize" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="EntryView" customModule="Quize" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Wa-ae-y74">
-                                <rect key="frame" x="123" y="209" width="89" height="151"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fai-1n-HbR">
-                                <rect key="frame" x="123" y="701" width="156" height="79"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <state key="normal" title="Change text">
-                                    <color key="titleColor" systemColor="systemYellowColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1E-oH-gg1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2B-Xq-D4C">
-                                <rect key="frame" x="108" y="368" width="104" height="121"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Main Menu"/>
-                                <connections>
-                                    <action selector="buttonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n2C-Uf-pYq"/>
-                                    <segue destination="u1n-dV-tlS" kind="show" id="ZA8-Ik-MOW"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray3Color"/>
                     </view>
                     <navigationItem key="navigationItem" id="nfs-yl-Nyu"/>
                     <connections>
-                        <outlet property="helloLabel" destination="7Wa-ae-y74" id="rye-CO-tG4"/>
+                        <segue destination="u1n-dV-tlS" kind="show" identifier="toMainViewControllerSegue" id="pqy-M9-fkK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403.125" y="-458.45070422535213"/>
+            <point key="canvasLocation" x="473" y="-458"/>
         </scene>
         <!--Paulse View Controller-->
         <scene sceneID="QQd-WU-4Hb">
             <objects>
                 <viewController id="EDs-wH-ME1" customClass="PaulseViewController" customModule="Quize" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5Uw-H6-vgC">
+                    <view key="view" contentMode="scaleToFill" id="5Uw-H6-vgC" customClass="PaulseView" customModule="Quize" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N1q-Xs-Sfc" customClass="PaulseView" customModule="Quize" customModuleProvider="target">
+                                <rect key="frame" x="40" y="182" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Byb-eH-g8C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -70,33 +48,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3R-QQ-tgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="182" y="-1355"/>
+            <point key="canvasLocation" x="1974" y="-458"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="JPV-fT-jMJ">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="u1n-dV-tlS" customClass="MainViewController" customModule="Quize" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wFQ-xU-udI">
+                    <view key="view" contentMode="scaleToFill" id="wFQ-xU-udI" customClass="MainView" customModule="Quize" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1WO-Rb-oNl">
-                                <rect key="frame" x="89" y="135" width="159" height="257"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Lets play"/>
-                                <connections>
-                                    <segue destination="EDs-wH-ME1" kind="show" id="8Wt-DL-ZNb"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="N8Q-0K-dWT"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="cei-M5-Eop"/>
+                    <connections>
+                        <segue destination="EDs-wH-ME1" kind="show" identifier="toPaulseViewControllerSegue" id="cLH-CZ-tWI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwa-dH-sd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1524.375" y="-870.42253521126759"/>
+            <point key="canvasLocation" x="1206" y="-458"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jWt-c4-3yI">

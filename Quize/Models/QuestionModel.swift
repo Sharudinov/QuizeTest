@@ -29,9 +29,17 @@ struct Queezy {
         self.questions = questions
     }
 }
-class SaveQueezy {
-    var pollse = [
-        Queezy(name: "Test", questions: [
+enum SaveQueezy {
+    static let pollse = [
+        Queezy(name: "Английский начальный", questions: [
+            QuestionModel(title: "Как по английски кошка", answers: ["rat","cat","bat"], rightAnswer: "cat"),
+            
+        ]),
+        Queezy(name: "Английский средний", questions: [
+            QuestionModel(title: "Как по английски кошка", answers: ["rat","cat","bat"], rightAnswer: "cat"),
+            
+        ]),
+        Queezy(name: "Английский продвинутый", questions: [
             QuestionModel(title: "Как по английски кошка", answers: ["rat","cat","bat"], rightAnswer: "cat"),
             
         ])

@@ -9,24 +9,38 @@ import UIKit
 
 class EntryViewController: UIViewController {
 
-    @IBOutlet var helloLabel: UILabel!
+    private var entryView: EntryView {
+        return view as! EntryView
+    }
+    private let toMainVCIdentifier = "toMainViewControllerSegue"
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    
-        
-        view.backgroundColor = .red
-        
-        
+     //   entryView.userNameTextField.delegate = self
+        entryView.delegate = self
+    //    entryView.userNameTextField.becomeFirstResponder()
     }
-
     
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let _  = touches.first else { return }
         
-    
-    @IBAction func buttonDidTap(_ sender: UIButton) {
-        helloLabel.text = "Hi"
+        entryView.userNameTextField.resignFirstResponder()
     }
+  //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
     
 }
-
+extension EntryViewController: ReceiverNextButtonTapDelegate {
+    func nextButtonTapped(_ sender: UIButton) {
+        performSegue(withIdentifier: toMainVCIdentifier, sender: sender)
+    }
+}
+extension EntryViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        print("Ended: " + (textField.text ?? ""))
+    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        print("Beginned: " + (textField.text ?? ""))
+    }
+}
