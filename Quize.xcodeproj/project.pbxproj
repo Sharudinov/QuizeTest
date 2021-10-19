@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FA13047F26F0DC32002B9C42 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13047E26F0DC32002B9C42 /* MainViewController.swift */; };
 		FA13048226F0DC4D002B9C42 /* PaulseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13048126F0DC4D002B9C42 /* PaulseViewController.swift */; };
+		FA13048526F10D87002B9C42 /* EntryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA13048426F10D87002B9C42 /* EntryView.xib */; };
+		FA13048826F110D2002B9C42 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13048726F110D2002B9C42 /* EntryView.swift */; };
+		FA13048B26F12AB3002B9C42 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA13048A26F12AB3002B9C42 /* UIView+Extension.swift */; };
 		FA44BCEA26DBB96E004193D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44BCE926DBB96E004193D2 /* AppDelegate.swift */; };
 		FA44BCEC26DBB96E004193D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44BCEB26DBB96E004193D2 /* SceneDelegate.swift */; };
 		FA44BCEE26DBB96F004193D2 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44BCED26DBB96F004193D2 /* EntryViewController.swift */; };
@@ -16,11 +19,21 @@
 		FA44BCF326DBB970004193D2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA44BCF226DBB970004193D2 /* Assets.xcassets */; };
 		FA44BCF626DBB970004193D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA44BCF426DBB970004193D2 /* LaunchScreen.storyboard */; };
 		FA44BD0126DC4A09004193D2 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA44BD0026DC4A09004193D2 /* QuestionModel.swift */; };
+		FA5CAF3F26FCC31600479823 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5CAF3E26FCC31600479823 /* Singleton.swift */; };
+		FA9C0A8C26F4E5A7003F51A7 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C0A8B26F4E5A7003F51A7 /* MainView.swift */; };
+		FA9C0A8F26F4E630003F51A7 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9C0A8E26F4E630003F51A7 /* MainView.xib */; };
+		FA9C0A9226F4E651003F51A7 /* PaulseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C0A9126F4E651003F51A7 /* PaulseView.swift */; };
+		FA9C0A9526F4E661003F51A7 /* PaulseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9C0A9426F4E661003F51A7 /* PaulseView.xib */; };
+		FA9C0A9826F4E69C003F51A7 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9C0A9726F4E69C003F51A7 /* ProgressView.swift */; };
+		FA9C0A9B26F4E6AB003F51A7 /* ProgressView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA9C0A9A26F4E6AB003F51A7 /* ProgressView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FA13047E26F0DC32002B9C42 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FA13048126F0DC4D002B9C42 /* PaulseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaulseViewController.swift; sourceTree = "<group>"; };
+		FA13048426F10D87002B9C42 /* EntryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryView.xib; sourceTree = "<group>"; };
+		FA13048726F110D2002B9C42 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		FA13048A26F12AB3002B9C42 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		FA44BCE626DBB96E004193D2 /* Quize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA44BCE926DBB96E004193D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA44BCEB26DBB96E004193D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +43,13 @@
 		FA44BCF526DBB970004193D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA44BCF726DBB970004193D2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA44BD0026DC4A09004193D2 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		FA5CAF3E26FCC31600479823 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
+		FA9C0A8B26F4E5A7003F51A7 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		FA9C0A8E26F4E630003F51A7 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		FA9C0A9126F4E651003F51A7 /* PaulseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaulseView.swift; sourceTree = "<group>"; };
+		FA9C0A9426F4E661003F51A7 /* PaulseView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaulseView.xib; sourceTree = "<group>"; };
+		FA9C0A9726F4E69C003F51A7 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		FA9C0A9A26F4E6AB003F51A7 /* ProgressView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProgressView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +87,14 @@
 		FA13047C26F0DB66002B9C42 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FA13048426F10D87002B9C42 /* EntryView.xib */,
+				FA13048726F110D2002B9C42 /* EntryView.swift */,
+				FA9C0A8B26F4E5A7003F51A7 /* MainView.swift */,
+				FA9C0A8E26F4E630003F51A7 /* MainView.xib */,
+				FA9C0A9126F4E651003F51A7 /* PaulseView.swift */,
+				FA9C0A9426F4E661003F51A7 /* PaulseView.xib */,
+				FA9C0A9726F4E69C003F51A7 /* ProgressView.swift */,
+				FA9C0A9A26F4E6AB003F51A7 /* ProgressView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,6 +124,8 @@
 				FA44BCFF26DC4960004193D2 /* Models */,
 				FA44BCEF26DBB96F004193D2 /* Main.storyboard */,
 				FA44BCF426DBB970004193D2 /* LaunchScreen.storyboard */,
+				FA13048A26F12AB3002B9C42 /* UIView+Extension.swift */,
+				FA5CAF3E26FCC31600479823 /* Singleton.swift */,
 			);
 			path = Quize;
 			sourceTree = "<group>";
@@ -165,9 +195,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9C0A9B26F4E6AB003F51A7 /* ProgressView.xib in Resources */,
+				FA9C0A9526F4E661003F51A7 /* PaulseView.xib in Resources */,
 				FA44BCF626DBB970004193D2 /* LaunchScreen.storyboard in Resources */,
+				FA13048526F10D87002B9C42 /* EntryView.xib in Resources */,
 				FA44BCF326DBB970004193D2 /* Assets.xcassets in Resources */,
 				FA44BCF126DBB96F004193D2 /* Main.storyboard in Resources */,
+				FA9C0A8F26F4E630003F51A7 /* MainView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,11 +213,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA13048226F0DC4D002B9C42 /* PaulseViewController.swift in Sources */,
+				FA9C0A8C26F4E5A7003F51A7 /* MainView.swift in Sources */,
 				FA44BCEE26DBB96F004193D2 /* EntryViewController.swift in Sources */,
+				FA13048B26F12AB3002B9C42 /* UIView+Extension.swift in Sources */,
+				FA5CAF3F26FCC31600479823 /* Singleton.swift in Sources */,
+				FA9C0A9226F4E651003F51A7 /* PaulseView.swift in Sources */,
 				FA44BCEA26DBB96E004193D2 /* AppDelegate.swift in Sources */,
+				FA13048826F110D2002B9C42 /* EntryView.swift in Sources */,
 				FA44BCEC26DBB96E004193D2 /* SceneDelegate.swift in Sources */,
 				FA44BD0126DC4A09004193D2 /* QuestionModel.swift in Sources */,
 				FA13047F26F0DC32002B9C42 /* MainViewController.swift in Sources */,
+				FA9C0A9826F4E69C003F51A7 /* ProgressView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

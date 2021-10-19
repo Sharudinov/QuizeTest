@@ -8,22 +8,34 @@
 import UIKit
 
 class PaulseViewController: UIViewController {
+    var paulseView: PaulseView {
+        view as! PaulseView
+    }
+    var value: Double = 0 {
+        didSet {
+            self.paulseView.progressView.updateProgress(self.value)
+            
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        value = 0
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        addValue()
     }
-    */
+    private func addValue() {
+            value += 0.01
 
+            if value > 1 { return }
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                
+                self.addValue()
+            }
+        }
 }
