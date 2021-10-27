@@ -33,6 +33,8 @@ enum SaveQueezy {
     static let pollse = [
         Queezy(name: "Английский начальный", questions: [
             QuestionModel(title: "Как по английски кошка", answers: ["rat","cat","bat"], rightAnswer: "cat"),
+            QuestionModel(title: "Как по английски собака", answers: ["rat","dog","bat"], rightAnswer: "dog"),
+            
             
         ]),
         Queezy(name: "Английский средний", questions: [

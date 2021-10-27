@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,29 +11,68 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaulseView" customModule="Quize" customModuleProvider="target">
             <connections>
                 <outlet property="progressView" destination="y6q-Lt-ALJ" id="6Of-NW-lZo"/>
+                <outlet property="titlleLabel" destination="9gt-LV-JPC" id="8Wg-M6-9Dk"/>
+                <outletCollection property="answerButton" destination="Bje-Uk-vKo" collectionClass="NSMutableArray" id="JV4-81-PgG"/>
+                <outletCollection property="answerButton" destination="NNe-aV-7TG" collectionClass="NSMutableArray" id="J4k-5r-Avz"/>
+                <outletCollection property="answerButton" destination="JyF-87-Ws6" collectionClass="NSMutableArray" id="foC-Uq-3wy"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6q-Lt-ALJ" customClass="ProgressView" customModule="Quize" customModuleProvider="target">
-                    <rect key="frame" x="20" y="54" width="374" height="30"/>
+                    <rect key="frame" x="20" y="10" width="280" height="30"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="IUF-a4-V3o"/>
                     </constraints>
                 </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gPx-OZ-zji">
+                    <rect key="frame" x="16" y="140" width="288" height="228"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9gt-LV-JPC">
+                            <rect key="frame" x="78" y="0.0" width="132.5" height="48"/>
+                            <fontDescription key="fontDescription" name="DiwanMishafi" family="Mishafi" pointSize="33"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bje-Uk-vKo">
+                            <rect key="frame" x="121" y="78" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="answerDidTap:" destination="-1" eventType="touchUpInside" id="Y9R-Un-tmf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNe-aV-7TG">
+                            <rect key="frame" x="121" y="138" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="answerDidTap:" destination="-1" eventType="touchUpInside" id="et1-PX-jDP"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyF-87-Ws6">
+                            <rect key="frame" x="121" y="198" width="46" height="30"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="answerDidTap:" destination="-1" eventType="touchUpInside" id="W8Z-bD-tWy"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="y6q-Lt-ALJ" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="48Q-kt-cR4"/>
+                <constraint firstItem="gPx-OZ-zji" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="7m7-QX-RLD"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="y6q-Lt-ALJ" secondAttribute="trailing" constant="20" id="Ddl-re-bgL"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gPx-OZ-zji" secondAttribute="trailing" constant="16" id="KkT-yB-d4p"/>
+                <constraint firstItem="gPx-OZ-zji" firstAttribute="top" secondItem="y6q-Lt-ALJ" secondAttribute="bottom" constant="100" id="L0F-3N-CVZ"/>
                 <constraint firstItem="y6q-Lt-ALJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="w2s-ac-LzO"/>
             </constraints>
-            <point key="canvasLocation" x="114" y="24"/>
+            <point key="canvasLocation" x="113.04347826086958" y="23.4375"/>
         </view>
     </objects>
     <resources>

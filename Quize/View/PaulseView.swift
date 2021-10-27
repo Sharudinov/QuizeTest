@@ -7,10 +7,18 @@
 
 import UIKit
 
-class PaulseView: UIView {
+protocol PaulseViewAnswerSelectionDelegate: AnyObject {
+    func buttonDidTap(_ string: String)
+}
 
+class PaulseView: UIView {
+    
+    weak var delegate: PaulseViewAnswerSelectionDelegate?
+    
     @IBOutlet var progressView: ProgressView!
     
+    @IBOutlet var titlleLabel: UILabel!
+    @IBOutlet var answerButton: [UIButton]!
     var paulseView: UIView!
     
     required init?(coder: NSCoder) {
@@ -24,5 +32,9 @@ class PaulseView: UIView {
         super.layoutSubviews()
         
         paulseView?.frame = self.bounds
+    }
+    
+    @IBAction func answerDidTap(_ sender: UIButton) {
+        delegate?.buttonDidTap(sender.titleLabel?.text ?? "")
     }
 }

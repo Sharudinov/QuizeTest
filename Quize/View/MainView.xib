@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView" customModule="Quize" customModuleProvider="target">
             <connections>
+                <outlet property="helloLabel" destination="cRA-zi-Zui" id="3HK-oO-kNX"/>
                 <outletCollection property="buttons" destination="xn2-CO-NfV" collectionClass="NSMutableArray" id="w0h-sb-isD"/>
                 <outletCollection property="buttons" destination="3eG-nB-hd0" collectionClass="NSMutableArray" id="Ryc-dg-3RA"/>
                 <outletCollection property="buttons" destination="HgP-aZ-H2u" collectionClass="NSMutableArray" id="TOF-8K-Pew"/>
@@ -53,9 +54,20 @@
                         <action selector="toPaulseViewButton:" destination="-1" eventType="touchUpInside" id="BjB-Yb-dtM"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRA-zi-Zui">
+                    <rect key="frame" x="16" y="84" width="382" height="33"/>
+                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemGrayColor"/>
+            <constraints>
+                <constraint firstItem="cRA-zi-Zui" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="RQk-EC-WWG"/>
+                <constraint firstItem="cRA-zi-Zui" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="dUR-4m-0SM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="cRA-zi-Zui" secondAttribute="trailing" constant="16" id="wcG-Ic-d6f"/>
+            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="93.75"/>
         </view>
     </objects>

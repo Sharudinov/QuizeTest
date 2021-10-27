@@ -7,8 +7,7 @@
 
 import UIKit
 
-protocol ReceiverNextButtonDelegate:
-    AnyObject{
+protocol ReceiverNextButtonDelegate:AnyObject{
     
     func nextButtonTap(_ sender:UIButton)
 }
@@ -17,6 +16,7 @@ class MainView: UIView {
     
     weak var secondDelegate: ReceiverNextButtonDelegate?
     
+    @IBOutlet var helloLabel: UILabel!
     @IBOutlet var buttons: [UIButton]!
     @IBAction func toPaulseViewButton(_ sender: UIButton) {
         secondDelegate?.nextButtonTap(sender)

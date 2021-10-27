@@ -28,12 +28,27 @@ class EntryViewController: UIViewController {
         entryView.userNameTextField.resignFirstResponder()
     }
   //  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+    private func showAlertWithText(_ title: String){
+        let alertControllerr = UIAlertController(title: title, message: nil, preferredStyle: .actionSheet)
+        let okActionn = UIAlertAction(title: "Меньше 4 символов", style: .cancel){
+            [weak self] (_) in self?.navigationController?.popViewController(animated: true)
+        }
+        alertControllerr.addAction(okActionn)
+        present(alertControllerr, animated: true, completion: nil)
+    }
     
 }
+
 extension EntryViewController: ReceiverNextButtonTapDelegate {
     func nextButtonTapped(_ sender: UIButton) {
+        guard let text = entryView.userNameTextField.text , !text.isEmpty , text.count > 3 else {
+            
+            showAlertWithText("Ошибка")
+            return
+        }
+        Singleton.shared.userName = text
         performSegue(withIdentifier: toMainVCIdentifier, sender: sender)
+        
     }
 }
 extension EntryViewController: UITextFieldDelegate {
