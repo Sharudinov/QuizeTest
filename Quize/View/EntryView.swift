@@ -10,18 +10,14 @@ import UIKit
 protocol ReceiverNextButtonTapDelegate: AnyObject {
     
     func nextButtonTapped(_ sender: UIButton)
-    
 }
 
 class EntryView: UIView {
-    var color: String!
     
-    @IBOutlet var userNameTextField: UITextField!
+    var color: String!
     weak var delegate: ReceiverNextButtonTapDelegate?
     
-    
-    
-    
+    @IBOutlet var userNameTextField: UITextField!
     @IBAction func toMainViewButton(_ sender: UIButton) {
         
         delegate?.nextButtonTapped(sender)
@@ -44,6 +40,4 @@ class EntryView: UIView {
         
         entryView?.frame = self.bounds
     }
-    
-
 }

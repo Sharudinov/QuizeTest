@@ -1,0 +1,18 @@
+//
+//  TitleCollectionViewCell.swift
+//  Quize
+//
+//  Created by Мурад on 18.11.2021.
+//
+
+import UIKit
+
+class TitleCollectionViewCell: UICollectionViewCell {
+
+    @IBOutlet var titleLabel: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
+    }
+
+}

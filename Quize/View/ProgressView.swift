@@ -31,7 +31,7 @@ class ProgressView: UIView {
     
     
     
-    // mark - view methods
+    // MARK: - view methods
     required init? (coder: NSCoder) {
         super.init(coder: coder)
         
@@ -63,10 +63,7 @@ class ProgressView: UIView {
         }
         let time = Int(Double(Constants.Values.timerStepsCount) * Constants.Values.timerDelay * newProgress)
         timeLeaveLabel.text = "\(time) sec"
-        
     }
-    
-        
 }
 
 

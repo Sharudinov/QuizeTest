@@ -7,20 +7,22 @@
 
 import UIKit
 
-protocol ReceiverNextButtonDelegate:
-    AnyObject{
+protocol ReceiverNextButtonDelegate:AnyObject{
     
     func nextButtonTap(_ sender:UIButton)
 }
 
 class MainView: UIView {
     
+    let levelPaulse: [String] = ["Английский уровень 1",
+    "Английский уровень 2",
+    "Английский уровень 3"]
+    
     weak var secondDelegate: ReceiverNextButtonDelegate?
     
-    @IBOutlet var buttons: [UIButton]!
-    @IBAction func toPaulseViewButton(_ sender: UIButton) {
-        secondDelegate?.nextButtonTap(sender)
-    }
+    @IBOutlet var myTableView: UITableView!
+    @IBOutlet var helloLabel: UILabel!
+   
     
     
     var mainView: UIView!
@@ -32,9 +34,7 @@ class MainView: UIView {
         
         addSubview(mainView!)
         
-        buttons.forEach { (button) in
-            button.setTitle(SaveQueezy.pollse[button.tag].name, for: [])
-        }
+        
     }
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -43,3 +43,4 @@ class MainView: UIView {
     }
 
 }
+

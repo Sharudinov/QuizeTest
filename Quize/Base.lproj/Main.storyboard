@@ -50,6 +50,22 @@
             </objects>
             <point key="canvasLocation" x="1974" y="-458"/>
         </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="RHC-O9-3at">
+            <objects>
+                <viewController id="DLL-pA-o8j" customClass="SettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hze-Pc-AM8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="4Fp-Oh-1l6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ifw-mh-hDC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zp4-Qh-85Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="473" y="241"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="JPV-fT-jMJ">
             <objects>
@@ -60,12 +76,25 @@
                         <viewLayoutGuide key="safeArea" id="N8Q-0K-dWT"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="cei-M5-Eop"/>
+                    <navigationItem key="navigationItem" id="cei-M5-Eop">
+                        <barButtonItem key="leftBarButtonItem" title="Setting" id="J1v-GR-M8B">
+                            <connections>
+                                <action selector="settingTable:" destination="xxq-s8-l4q" id="bMW-3X-gn9"/>
+                                <segue destination="DLL-pA-o8j" kind="show" id="JU5-yS-Tmi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Scores" id="Xql-NQ-BXL">
+                            <connections>
+                                <segue destination="iaw-MN-bAO" kind="show" id="KQd-0y-HBO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="EDs-wH-ME1" kind="show" identifier="toPaulseViewControllerSegue" id="cLH-CZ-tWI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bwa-dH-sd3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="xxq-s8-l4q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1206" y="-458"/>
         </scene>
@@ -86,6 +115,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RBc-XX-z5S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-594.375" y="-458.45070422535213"/>
+        </scene>
+        <!--Scores View Controller-->
+        <scene sceneID="0o1-1R-g58">
+            <objects>
+                <viewController id="iaw-MN-bAO" customClass="ScoresViewController" customModule="Quize" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cLP-rK-CSz" customClass="ScoresView" customModule="Quize" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9g8-B7-R3B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QxC-UN-oRJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PEs-kd-SaN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1206" y="241"/>
         </scene>
     </scenes>
     <resources>

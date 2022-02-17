@@ -7,22 +7,30 @@
 
 import UIKit
 
-class PaulseView: UIView {
 
+class PaulseView: UIView {
+    
+    @IBOutlet var myCollectionView: UICollectionView!
     @IBOutlet var progressView: ProgressView!
+    
+    
     
     var paulseView: UIView!
     
     required init?(coder: NSCoder) {
+        
         super.init (coder: coder)
         
         paulseView = getViewFromXib()
         
         addSubview(paulseView!)
+        
     }
     override func layoutSubviews() {
         super.layoutSubviews()
         
         paulseView?.frame = self.bounds
     }
+    
+   
 }
