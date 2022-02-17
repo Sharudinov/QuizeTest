@@ -63,7 +63,7 @@ class ProgressView: UIView {
         }
         let time = Int(Double(Constants.Values.timerStepsCount) * Constants.Values.timerDelay * newProgress)
         timeLeaveLabel.text = "\(time) sec"
-        }
+    }
 }
 
 

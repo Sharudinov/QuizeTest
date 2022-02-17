@@ -11,6 +11,6 @@ class Singleton {
     static let shared = Singleton()
     
     var userName: String = ""
-    
+    // создать структуру с параметрами
     private init () {}
 }

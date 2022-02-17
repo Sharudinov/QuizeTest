@@ -14,13 +14,15 @@ protocol ReceiverNextButtonDelegate:AnyObject{
 
 class MainView: UIView {
     
+    let levelPaulse: [String] = ["Английский уровень 1",
+    "Английский уровень 2",
+    "Английский уровень 3"]
+    
     weak var secondDelegate: ReceiverNextButtonDelegate?
     
+    @IBOutlet var myTableView: UITableView!
     @IBOutlet var helloLabel: UILabel!
-    @IBOutlet var buttons: [UIButton]!
-    @IBAction func toPaulseViewButton(_ sender: UIButton) {
-        secondDelegate?.nextButtonTap(sender)
-    }
+   
     
     
     var mainView: UIView!
@@ -32,9 +34,7 @@ class MainView: UIView {
         
         addSubview(mainView!)
         
-        buttons.forEach { (button) in
-            button.setTitle(SaveQueezy.pollse[button.tag].name, for: [])
-        }
+        
     }
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -43,3 +43,4 @@ class MainView: UIView {
     }
 
 }
+

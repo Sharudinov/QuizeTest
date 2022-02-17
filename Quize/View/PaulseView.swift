@@ -7,26 +7,24 @@
 
 import UIKit
 
-protocol PaulseViewAnswerSelectionDelegate: AnyObject {
-    func buttonDidTap(_ string: String)
-}
 
 class PaulseView: UIView {
     
-    weak var delegate: PaulseViewAnswerSelectionDelegate?
-    
+    @IBOutlet var myCollectionView: UICollectionView!
     @IBOutlet var progressView: ProgressView!
     
-    @IBOutlet var titlleLabel: UILabel!
-    @IBOutlet var answerButton: [UIButton]!
+    
+    
     var paulseView: UIView!
     
     required init?(coder: NSCoder) {
+        
         super.init (coder: coder)
         
         paulseView = getViewFromXib()
         
         addSubview(paulseView!)
+        
     }
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -34,7 +32,5 @@ class PaulseView: UIView {
         paulseView?.frame = self.bounds
     }
     
-    @IBAction func answerDidTap(_ sender: UIButton) {
-        delegate?.buttonDidTap(sender.titleLabel?.text ?? "")
-    }
+   
 }
